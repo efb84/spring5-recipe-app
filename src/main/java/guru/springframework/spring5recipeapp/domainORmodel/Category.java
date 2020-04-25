@@ -12,8 +12,8 @@ public class Category {
     private String description;
 
 
-    @ManyToMany(mappedBy = "categoriesxx")
-    private Set<Recipe>recipesaa;
+    @ManyToMany(mappedBy = "categories")
+    private Set<Recipe>recipes;
 
 
     public Long getId() {
@@ -33,10 +33,10 @@ public class Category {
     }
 
     public Set<Recipe> getRecipesaa() {
-        return recipesaa;
+        return recipes;
     }
 
     public void setRecipesaa(Set<Recipe> recipesaa) {
-        this.recipesaa = recipesaa;
+        this.recipes = recipes;
     }
 }

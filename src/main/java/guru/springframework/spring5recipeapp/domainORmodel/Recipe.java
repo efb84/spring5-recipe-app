@@ -19,6 +19,7 @@ public class Recipe {
     private String source;
     private String url;
     //to add
+    @Lob
     private String directions;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy ="recipefb")
@@ -39,7 +40,7 @@ public class Recipe {
               joinColumns = @JoinColumn(name= "recipe_id_bar") ,
              inverseJoinColumns = @JoinColumn (name = "category_id_box")
     )
-    private Set <Category> categoriesxx=new HashSet<>();
+    private Set <Category> categories=new HashSet<>();
 
 
 
@@ -140,13 +141,11 @@ public class Recipe {
         this.difficulty = difficulty;
     }
 
-    public Set<Category> getCategoriesxx() {
-        return categoriesxx;
+    public Set<Category> getCategories() {
+        return categories;
     }
 
-    public void setCategoriesxx(Set<Category> categoriesxx) {
-        this.categoriesxx = categoriesxx;
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
-
-
 }
