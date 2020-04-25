@@ -43,8 +43,6 @@ public class Recipe {
     private Set <Category> categories=new HashSet<>();
 
 
-
-
     public Long getId() {
         return id;
     }
@@ -123,12 +121,19 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+        notes.setRecipe(this);
     }
 
     public Set<Ingredient> getIngredients() {
         return ingredients;
     }
 
+
+    public Recipe addIngredient(Ingredient ingredient) {
+        ingredient.setRecipefb(this);
+        this.ingredients.add(ingredient);
+        return this;
+}
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
