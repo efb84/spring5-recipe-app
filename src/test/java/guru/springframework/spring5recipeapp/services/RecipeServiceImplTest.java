@@ -5,16 +5,13 @@ import guru.springframework.spring5recipeapp.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class RecipeServiceImplTest {
 
